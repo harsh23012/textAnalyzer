@@ -53,7 +53,7 @@ function TextForm(props) {
 
     <div className="container my-3">
         <h1>Your Text Summary</h1>
-        <p><b>{text.split(" ").length-1}</b> words and <b>{text.length}</b> characters.</p>
+        <p><b>{text.split(" ").filter((element)=>{return element.length!=0}).length}</b> words and <b>{text.length}</b> characters.</p>
         <p>Average time required to read this sentance is <b>{(text.length/238).toFixed(3)}</b> minutes</p>
         <h2>Preview</h2>
         <p>{text.length>0?text:"Enter Something to preview."}</p>
